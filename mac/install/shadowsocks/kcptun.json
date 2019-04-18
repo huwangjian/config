@@ -1,0 +1,14 @@
+{
+  "localaddr": ":8888",
+  "remoteaddr": "ip:8888",
+  "key": "pass",
+  "crypt": "none",
+  "mode": "fast2",
+  "mtu": 1350,
+  "sndwnd": 512,
+  "rcvwnd": 1024,
+  "datashard": 10,
+  "parityshard": 3,
+  "dscp": 0,
+  "nocomp": true
+}

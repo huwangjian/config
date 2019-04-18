@@ -1,0 +1,23 @@
+[user]
+	name = huwangjian
+	email = huwangjian@users.noreply.github.com
+[alias]
+	s = status
+	a = !git add . && git status
+	au = !git add -u . && git status
+	aa = !git add . && git add -u . && git status
+	c = commit
+	cm = commit -m
+	ca = commit --amend # careful
+	ac = !git add . && git commit
+	acm = !git add . && git commit -m
+	d = diff --color-words
+	dh = diff --color-words head
+	lg = log --color --pretty=format:'%ad %C(yellow)%h%Cred%d%Creset %s' --abbrev-commit --decorate --date=short
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+[push]
+	default = simple
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/jian/.gitignore_global
