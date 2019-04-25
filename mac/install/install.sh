@@ -26,16 +26,13 @@ brew install wget
 brew install node
 brew install python
 
-brew install vim --with-python --with-perl
-brew install macvim --env-std --with-override-system-vim
-brew linkapps macvim
-brew link --overwrite vim
-brew link --overwrite macvim
+brew install vim
+#brew install macvim
 
-brew install shadowsocks-libev
-brew install --with-bundle mpv --without-youtube-dl
-brew linkapps mpv
+brew install mpv
+ln -Fs `find /usr/local/ -name "mpv.app"` /Applications/mpv.app
 
+#brew install shadowsocks-libev
 
 #==============================================================================#
 
@@ -46,7 +43,7 @@ brew cask install go2shell
 
 #brew cask install atom
 brew cask install visual-studio-code
-#brew cask install github-desktop
+#brew cask install github
 #brew cask install mysqlworkbench
 
 #brew cask install calibre
