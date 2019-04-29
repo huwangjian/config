@@ -53,7 +53,7 @@ chsh -s `which zsh`
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 curl -s https://raw.githubusercontent.com/wesbos/Cobalt2-iterm/master/cobalt2.zsh-theme -o ~/.oh-my-zsh/themes/cobalt2.zsh-theme
 curl -s https://raw.githubusercontent.com/wesbos/Cobalt2-iterm/master/cobalt2.itermcolors -o ~/Downloads/cobalt2.itermcolors
-curl -s https://raw.githubusercontent.com/lysyi3m/osx-terminal-themes/master/schemes/Cobalt2.terminal
+curl -s https://raw.githubusercontent.com/lysyi3m/osx-terminal-themes/master/schemes/Cobalt2.terminal -o ~/Downloads/cobalt2.terminal
 # plugins=( [plugins...] zsh-syntax-highlighting)
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 cp -rf ./dotfiles/zshrc ~/.zshrc
