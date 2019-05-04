@@ -1,0 +1,10 @@
+00 20 * * * /etc/init.d/shadowsocks-libev restart >> /tmp/reboot.log
+00 20 * * * /usr/local/bin/supervisorctl restart kcptun >> /tmp/reboot.log
+
+ task shadowsocks {
+     crontab-spec "0 3 * * *"
+     executable {
+         arguments "restart >> /tmp/shadowsocks.log"
+         path /etc/init.d/shadowsocks
+     }
+ }
