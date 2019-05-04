@@ -1,0 +1,5 @@
+choco install ChocolateyGUI
+
+choco install choco-upgrade-all-at --params "'/WEEKLY:yes /DAY:SUN /TIME:12:00 /ABORTTIME:13:00'"
+
+choco install fluent-terminal
