@@ -33,8 +33,9 @@ sudo launchctl load /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
 sudo killall -HUP mDNSResponder
 
 # Disable Hibernate
-#sudo pmset -a hibernatemode 0
-#sudo rm -rf /private/var/vm/sleepimage
+sudo pmset -a hibernatemode 0
+sudo rm /var/vm/sleepimage
+sudo mkdir /var/vm/sleepimage
 
 #==============================================================================#
 
@@ -63,6 +64,9 @@ git clone git://github.com/amix/vimrc.git ~/.vim\_runtime
 # sh ~/.vim_runtime/install_basic_vimrc.sh
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 cp -rf ./dotfiles/vimrc ~/.vimrc
+
+#install CotEdittor shortcut
+ln -s /Applications/CotEditor.app/Contents/SharedSupport/bin/cot /usr/local/bin/cot
 
 #==============================================================================#
 

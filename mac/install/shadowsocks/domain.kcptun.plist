@@ -6,7 +6,7 @@
     <string>domain.kcptun</string>
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/local/opt/kcptun/client_darwin_amd64</string>
+      <string>/usr/local/opt/shadowsocks-libev/bin/client_darwin_amd64</string>
       <string>-c</string>
       <string>/usr/local/etc/kcptun.json</string>
     </array>

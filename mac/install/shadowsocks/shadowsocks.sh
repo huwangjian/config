@@ -1,11 +1,26 @@
 #!/bin/sh
-# curl http://flora.leaskh.com/pac?proxy=SOCKS5%20127.0.0.1%3A8964 -o /usr/local/etc/proxy.pac
 
+#brew install shadowsocks-libev
+
+mkdir tmp
+pushd tmp/
+
+curl -s https://api.github.com/repos/xtaci/kcptun/releases/latest \
+| grep "kcptun-darwin-amd64" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi -
+
+tarball="$(find . -name "kcptun-darwin-amd64*")"
+tar -xvzf $tarball
+chmod +x client_darwin_amd64
+
+popd
+
+cp -rf ./tmp/client_darwin_amd64 /usr/local/opt/shadowsocks-libev/bin
+
+cp -rf *json /usr/local/etc/
 cp -rf *.plist /usr/local/opt/shadowsocks-libev/
-cp -rf *.json /usr/local/etc/
-
-mkdir -p /usr/local/opt/kcptun
-sudo cp -rf ./kcptun/* /usr/local/opt/kcptun
 
 mkdir -p ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/shadowsocks-libev/*.plist ~/Library/LaunchAgents
@@ -19,3 +34,5 @@ echo "launchctl load ~/Library/LaunchAgents/domain.kcptun.plist" >> /usr/local/b
 chmod +x /usr/local/bin/ssreload
 
 /usr/local/bin/ssreload
+
+rm -rf tmp/

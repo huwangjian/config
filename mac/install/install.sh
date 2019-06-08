@@ -37,20 +37,17 @@ ln -Fs `find /usr/local/ -name "mpv.app"` /Applications/mpv.app
 #==============================================================================#
 
 brew cask install keka
-#brew cask install iterm2
+brew cask install iterm2
 brew cask install go2shell
-#brew cask install cheatsheet
+brew cask install cheatsheet
 
-#brew cask install atom
 brew cask install visual-studio-code
-#brew cask install github
-#brew cask install mysqlworkbench
+brew cask install github
 
-#brew cask install calibre
-#brew cask install waterfox
+brew cask install firefox
 brew cask install google-chrome
-#brew cask install resilio-sync
-#brew cask install neteasemusic
+brew cask install neteasemusic
+
 
 brew doctor
 
@@ -62,3 +59,7 @@ curl -s https://raw.githubusercontent.com/google/fonts/master/ofl/inconsolata/In
 curl -s https://raw.githubusercontent.com/google/fonts/master/ofl/inconsolata/Inconsolata-Bold.ttf -o Inconsolata-Bold.ttf
 mv *.* /Library/Fonts/
 cd .. && rm -rf fonts/
+
+#==============================================================================#
+#sudo spctl --master-disable
+#sudo spctl --master-enable
